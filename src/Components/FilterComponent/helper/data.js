@@ -16,7 +16,25 @@ export const fields = [
           caption: "Contains"
         }
       ]
-    }
+    },
+    {
+        name: "lang",
+        caption: "Field",
+        operators: [
+          {
+            name: "=",
+            caption: "Equals"
+          },
+          {
+            name: "<>",
+            caption: "RegEx"
+          },
+          {
+            name: "()",
+            caption: "Contains"
+          }
+        ]
+      }
   ];
   
   export const groups = [
