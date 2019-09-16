@@ -8,6 +8,7 @@ import {
     NavItem,
     NavLink,
     Button } from 'reactstrap';
+import './modal2.css';
 
 class Modal extends React.Component {
   constructor(props){

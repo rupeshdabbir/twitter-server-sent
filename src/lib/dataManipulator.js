@@ -19,7 +19,7 @@ export function buildKey(filter) {
         if(finalOperator === 'includes') {
             finalKey += `${field}.${finalOperator}('${value}')`;
         } else if(finalOperator === 'equal') {
-            finalKey += `${field} === ${value}`;
+            finalKey += `${field} === '${value}'`;
         } else { //regex
             finalKey += `${field}.match(${value})`;
         }
@@ -34,7 +34,6 @@ export function buildKey(filter) {
 export function getFilteredData(filter, data, key) {
     console.log("Key is", key);
     const result = data.filter(record => {
-        const key = buildKey(filter);
         if(eval('record.'+key)) {
             return true;
         }
